@@ -1,0 +1,8 @@
+<div class="inner">
+    <% entradas.forEach(e => { %>
+        <figure>
+            <img src="<%- e.thumbnail %>" alt="Imagen de articulo">
+        </figure>
+        <figcaption><%- e.title %></figcaption>
+    <% }) %>
+</div>

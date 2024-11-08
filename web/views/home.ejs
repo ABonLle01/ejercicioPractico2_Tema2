@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    
+    <header id="top">
+        <%- include('partials/cabecera') %>
+    </header>
+    <nav>
+        <ul>
+            <% categories.forEach(cat => { %>
+                <li><a href="#"><%= cat %></a></li>            
+            <% }) %>
+        </ul>
+    </nav>
+    
+    <section id="entradas">
+        <%- include('entries', {entradas: articles}) %>
+    </section>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+</body>
+</html>

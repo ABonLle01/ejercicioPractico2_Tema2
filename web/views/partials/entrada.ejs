@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header id="top">
+        <%- include('partials/cabecera') %>
+    </header>
+    <nav>
+        <ul>
+            <% categories.forEach(cat => { %>
+                <li><a href="#"><%= cat %></a></li>            
+            <% }) %>
+        </ul>
+    </nav>
+
+    <section id="entrada">
+        <% articles.forEach(a => { %>
+            <img src="<%- a.image %>" alt="">
+            <h1><%- a.title %></h1>
+            <p><%- a.intro %></p>
+            <a href="/home"><%- a.category %></a>
+            <p><%- a.content %></p>
+        <% }) %>
+    </section>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+</body>
+</html>
